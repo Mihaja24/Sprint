@@ -1,5 +1,6 @@
 package com.demo.controllers;
 
+import com.demo.models.Dept;
 import mg.itu.framework.annotation.Controller;
 import mg.itu.framework.annotation.Json;
 import mg.itu.framework.annotation.UrlMapping;
@@ -22,6 +23,16 @@ public class DeptController {
     public ModelAndView form() {
         ModelAndView mav = new ModelAndView("dept/form");
         mav.addAttribute("titre", "Nouveau departement");
+        return mav;
+    }
+
+    // Formulaire avec objet simple
+    @UrlMapping(url = "/dept/save", method = "POST")
+    public ModelAndView save(Dept dept) {
+        ModelAndView mav = new ModelAndView("dept/form");
+        mav.addAttribute("titre", "Departement enregistre");
+        mav.addAttribute("dept", dept);
+        mav.addAttribute("message", "Nom recu : " + dept.getNom() + " | Age recu : " + dept.getAge());
         return mav;
     }
 
