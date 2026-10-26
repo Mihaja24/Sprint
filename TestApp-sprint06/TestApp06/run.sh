@@ -32,8 +32,3 @@ fi
 echo ">> Deploiement..."
 cp -r . $TOMCAT_HOME/webapps/$APP_NAME
 
-echo ""
-echo "OK — Routes disponibles :"
-echo "  http://localhost:8082/$APP_NAME/dept/list      → JSP"
-echo "  http://localhost:8082/$APP_NAME/dept/new       → JSP + ModelAndView"
-echo "  http://localhost:8082/$APP_NAME/dept/api/list  → JSON"

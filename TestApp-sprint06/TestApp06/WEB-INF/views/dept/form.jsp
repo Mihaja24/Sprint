@@ -25,6 +25,11 @@
         <p>${message}</p>
     <% } %>
 
+    <form action="$(pageContext.request.contextPath)/dept/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="paramName" required>
+        <button type="button">Upload</button>
+    </form>
+
     <p><a href="list">Retour a la liste</a></p>
 </body>
 </html>
