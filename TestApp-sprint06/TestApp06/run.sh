@@ -9,6 +9,11 @@ SRC_DIR="src"
 CLASSES_DIR="WEB-INF/classes"
 LIB_DIR="WEB-INF/lib"
 
+FRAMEWORK_JAR="../../Framework/framework.jar"
+if [ -f "$FRAMEWORK_JAR" ]; then
+    cp -f "$FRAMEWORK_JAR" "$LIB_DIR/framework.jar"
+fi
+
 echo ">> Nettoyage..."
 rm -rf $CLASSES_DIR
 mkdir -p $CLASSES_DIR
@@ -32,8 +37,3 @@ fi
 echo ">> Deploiement..."
 cp -r . $TOMCAT_HOME/webapps/$APP_NAME
 
-echo ""
-echo "OK — Routes disponibles :"
-echo "  http://localhost:8082/$APP_NAME/dept/list      → JSP"
-echo "  http://localhost:8082/$APP_NAME/dept/new       → JSP + ModelAndView"
-echo "  http://localhost:8082/$APP_NAME/dept/api/list  → JSON"
