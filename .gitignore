@@ -1,0 +1,5 @@
+# artefacts de build
+**/framework.jar
+
+# scripts locaux d’exécution / environnement
+**/run.sh
