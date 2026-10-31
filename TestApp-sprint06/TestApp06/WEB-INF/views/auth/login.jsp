@@ -5,24 +5,18 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>Connexion</h1>
+    <h2>Connexion</h2>
 
-    <% if (request.getAttribute("error") != null) { %>
-        <p style="color:red">${error}</p>
-    <% } %>
-
-    <form action="login" method="POST">
-        <p>
-            <label>Nom d'utilisateur :
-                <input type="text" name="username">
-            </label>
-        </p>
-        <p>
-            <label>Mot de passe :
-                <input type="password" name="password">
-            </label>
-        </p>
+    <form action="/sprint06-test/login" method="post">
+        <p>Utilisateur : <input type="text" name="username" /></p>
+        <p>Mot de passe : <input type="password" name="password" /></p>
         <button type="submit">Se connecter</button>
     </form>
+
+    <p>Exemples :</p>
+    <ul>
+        <li>admin / admin</li>
+        <li>user / user</li>
+    </ul>
 </body>
 </html>

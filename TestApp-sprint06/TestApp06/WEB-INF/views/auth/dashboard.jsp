@@ -5,8 +5,12 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
+    <h2>Dashboard</h2>
     <p>${message}</p>
-    <a href="logout">Se deconnecter</a>
+    <p>Rôle : <strong>${role}</strong></p>
+
+    <p><a href="/sprint06-test/session">Voir ma session</a></p>
+    <p><a href="/sprint06-test/dept/admin">Page admin</a></p>
+    <p><a href="/sprint06-test/logout">Déconnexion</a></p>
 </body>
 </html>

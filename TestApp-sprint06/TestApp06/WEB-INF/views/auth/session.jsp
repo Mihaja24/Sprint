@@ -2,26 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Session utilisateur</title>
+    <title>Session</title>
 </head>
 <body>
-    <h1>Session utilisateur</h1>
+    <h2>Session utilisateur</h2>
+    <p>Utilisateur : <strong>${user}</strong></p>
+    <p>Rôle : <strong>${role}</strong></p>
 
-    <form action="session" method="POST">
-        <p>
-            <label>Nom de l'utilisateur :
-                <input type="text" name="user" value="${user}">
-            </label>
-        </p>
-        <button type="submit">Mettre dans la session</button>
-    </form>
-
-    <% if (request.getAttribute("user") != null) { %>
-        <p>Utilisateur dans la session : <strong><%= request.getAttribute("user") %></strong></p>
-    <% } else { %>
-        <p>Aucun utilisateur dans cette session.</p>
-    <% } %>
-
-    <p><a href="/sprint06-test/session">Actualiser</a></p>
+    <p><a href="/sprint06-test/dashboard">Retour au dashboard</a></p>
 </body>
 </html>
