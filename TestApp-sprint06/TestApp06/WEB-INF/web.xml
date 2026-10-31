@@ -6,7 +6,7 @@
 
     <context-param>
         <param-name>base-packages</param-name>
-        <param-value>com.demo.controllers</param-value>
+        <param-value>com.demo.controllers;;mg.itu.framework.controller</param-value>
     </context-param>
     <context-param>
         <param-name>view.prefix</param-name>
