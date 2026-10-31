@@ -25,6 +25,17 @@ public class DeptController {
         return mav;
     }
 
+    // Formulaire simple avec paramètres primitifs
+    @UrlMapping(url = "/dept/save", method = "POST")
+    public ModelAndView save(String nom, int age) {
+        ModelAndView mav = new ModelAndView("dept/form");
+        mav.addAttribute("titre", "Departement enregistre");
+        mav.addAttribute("message", "Nom recu : " + nom + " | Age recu : " + age);
+        mav.addAttribute("nom", nom);
+        mav.addAttribute("age", age);
+        return mav;
+    }
+
     // Retourne du JSON
     @Json
     @UrlMapping(url = "/dept/api/list", method = "GET")
